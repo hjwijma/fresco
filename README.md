@@ -12,7 +12,7 @@ A proven and powerful methods to stabilize proteins.
 
 **Some hints**
 - the manual is named protocolFRESCO<versionNumber>.pdf and includes a description of how to install the required external software.
-- it is a good idea to test in advance if the targeted protein can be screened easily for thermostability. In our experience, for some 20% of the proteins standard high throughput assays like ThermoFluor fail.
+- it is a good idea to test in advance if the targeted protein can be screened easily for thermostability. In our experience, for some 20% of the proteins give problems with standard medium throughput assays like ThermoFluor, requiring finding alternatives.
 
 
 
