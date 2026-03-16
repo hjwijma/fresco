@@ -14,9 +14,14 @@ A proven and powerful methods to stabilize proteins.
 - the manual is named protocolFRESCO<versionNumber>.pdf and includes hints for installing the required external software.
 - it is a good idea to test in advance if the targeted protein can be screened easily for thermostability. In our experience, for some 20% of the proteins standard high throughput assays like ThermoFluor fail.
 
-![Workflow Diagram](workflow_diagram.png)
+
+
+<img src="workflow_diagram.png" width="400" alt="Workflow Diagram">
 
 **Scheme 1. Workflow diagram of FRESCO.** The numbers refer to sections in the manual. 
+
+
+
 
 
 
@@ -26,8 +31,14 @@ A proven and powerful methods to stabilize proteins.
 
 
 
+
+
+
 ![overview operational stability](muchSlowerInactivation.png)
 **Figure 2. Examples slower inactivation by FRESCO-stabilized enzymes.**
+
+
+
 
 
 
