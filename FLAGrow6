@@ -1,0 +1,11 @@
+## settings  for a "row 6" protocol according to Kellogg, E.H., Leaver-Fay, E.H., Baker, D., Proteins 79, 830-838,2011
+-ddg::weight_file soft_rep_design
+-ddg::iterations 50
+-ddg::local_opt_only false 
+-ddg::min_cst false 
+-ddg::mean true
+-ddg::min false 
+-ddg::sc_min_only false 
+## additional settings that can or should be altered by the user
+-database /home/wijma/Rosetta_3_3_public_release/rosetta3.3_bundles/rosetta_database/ 
+-ddg::dump_pdbs false

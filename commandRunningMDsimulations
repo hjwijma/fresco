@@ -1,0 +1,42 @@
+# this is to make sure that the script file "todolist" can find the yasara application
+echo '#! /usr/bin/env bash' > todolist
+echo 'shopt -s expand_aliases' >> todolist
+echo 'source ~/.bash_profile' >> todolist
+echo 'source ~/.zprofile' >> todolist
+
+
+
+# this is to copy the MultiSeededMD.mcr, the script to carry out the MD simulations.
+cp ~/frescoSoft/FRESCO/MultiSeededMD.mcr .
+
+# the following is to make a list of example files to inspect of LEH as an example. If another protein has been selected, remove this section. 
+ls */*/*pdb | sed 's/^/yasara -txt MultiSeededMD.mcr "MacroTarget =?/g'| sed 's/.pdb/?" >>log_MD/g'| sed "s/?/'/g" | grep template  | grep -v Disulfides       >> todolist
+ls */*/*pdb | sed 's/^/yasara -txt MultiSeededMD.mcr "MacroTarget =?/g'| sed 's/.pdb/?" >>log_MD/g'| sed "s/?/'/g" | grep Q7M              >> todolist
+ls */*/*pdb | sed 's/^/yasara -txt MultiSeededMD.mcr "MacroTarget =?/g'| sed 's/.pdb/?" >>log_MD/g'| sed "s/?/'/g" | grep E68L  >> todolist
+ls */*/*pdb | sed 's/^/yasara -txt MultiSeededMD.mcr "MacroTarget =?/g'| sed 's/.pdb/?" >>log_MD/g'| sed "s/?/'/g" | grep A48F  >> todolist
+ls */*/*pdb | sed 's/^/yasara -txt MultiSeededMD.mcr "MacroTarget =?/g'| sed 's/.pdb/?" >>log_MD/g'| sed "s/?/'/g" | grep S111M >> todolist
+ls */*/*pdb | sed 's/^/yasara -txt MultiSeededMD.mcr "MacroTarget =?/g'| sed 's/.pdb/?" >>log_MD/g'| sed "s/?/'/g" | grep S12M  >> todolist
+ls */*/*pdb | sed 's/^/yasara -txt MultiSeededMD.mcr "MacroTarget =?/g'| sed 's/.pdb/?" >>log_MD/g'| sed "s/?/'/g" | grep T22D   >> todolist
+ls */*/*pdb | sed 's/^/yasara -txt MultiSeededMD.mcr "MacroTarget =?/g'| sed 's/.pdb/?" >>log_MD/g'| sed "s/?/'/g" | grep G129S  >> todolist
+ls */*/*pdb | sed 's/^/yasara -txt MultiSeededMD.mcr "MacroTarget =?/g'| sed 's/.pdb/?" >>log_MD/g'| sed "s/?/'/g" | grep E49P   >> todolist
+ls */*/*pdb | sed 's/^/yasara -txt MultiSeededMD.mcr "MacroTarget =?/g'| sed 's/.pdb/?" >>log_MD/g'| sed "s/?/'/g" | grep Y96W   >> todolist
+ls */*/*pdb | sed 's/^/yasara -txt MultiSeededMD.mcr "MacroTarget =?/g'| sed 's/.pdb/?" >>log_MD/g'| sed "s/?/'/g" | grep R9P    >> todolist
+ls */*/*pdb | sed 's/^/yasara -txt MultiSeededMD.mcr "MacroTarget =?/g'| sed 's/.pdb/?" >>log_MD/g'| sed "s/?/'/g" | grep E45K   >> todolist
+ls */*/*pdb | sed 's/^/yasara -txt MultiSeededMD.mcr "MacroTarget =?/g'| sed 's/.pdb/?" >>log_MD/g'| sed "s/?/'/g" | grep E124D   >> todolist
+ls */*/*pdb | sed 's/^/yasara -txt MultiSeededMD.mcr "MacroTarget =?/g'| sed 's/.pdb/?" >>log_MD/g'| sed "s/?/'/g" | grep A19K   >> todolist
+ls */*/*pdb | sed 's/^/yasara -txt MultiSeededMD.mcr "MacroTarget =?/g'| sed 's/.pdb/?" >>log_MD/g'| sed "s/?/'/g" | grep T85V    >> todolist
+
+
+
+
+# the following is to make a list of all the yasara runs. It works via the pipe symbol ( | ) to direct the output of one command to another. The sed commands replaces tekst, in which the symbol ^ means start of the line. 
+# remove in the next line the # to do MD simulations on all the variants.
+
+#ls NamedPdbFiles/*/*pdb| sed 's/Subdir_[A-Z]/& /g'| sed 's/[A-Z]/ &/6'| sort -n -k2 | sed 's/ //g' | sed 's/^/yasara -txt MultiSeededMD.mcr "MacroTarget =?/g' | sed 's/.pdb/?" >> log_MD/g' | sed "s/?/'/g" | grep Subdir_template >> todolist
+#ls NamedPdbFiles/*/*pdb| sed 's/Subdir_[A-Z]/& /g'| sed 's/[A-Z]/ &/6'| sort -n -k2 | sed 's/ //g' |  sed 's/^/yasara -txt MultiSeededMD.mcr "MacroTarget =?/g' | sed 's/.pdb/?" >> log_MD/g' | sed "s/?/'/g" | grep -v Subdir_template    >> todolist
+#ls UniqueDisulfides/*/*pdb | sed 's/^/yasara -txt MultiSeededMD.mcr "MacroTarget =?/g' | sed 's/.pdb/?" >> log_MD/g' | sed "s/?/'/g" | grep Subdir_templates >> todolist
+#ls UniqueDisulfides/*/*pdb | sed 's/^/yasara -txt MultiSeededMD.mcr "MacroTarget =?/g' | sed 's/.pdb/?" >> log_MD/g' | sed "s/?/'/g" | grep -v Subdir_templates >> todolist
+
+
+# this converts the todolist into an executable
+chmod +x todolist

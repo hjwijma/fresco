@@ -1,0 +1,24 @@
+#! /usr/bin/env bash
+# this is to make sure that the script file "todolist" can find the yasara application
+echo '#! /usr/bin/env bash' > todolist
+echo 'shopt -s expand_aliases' >> todolist
+echo 'source ~/.bash_profile' >> todolist
+echo 'source ~/.zprofile' >> todolist
+
+# the following is to make a list of all the yasara runs. It works via the pipe symbol ( | ) to direct the output of one command to another. The sed commands replaces tekst, in which the symbol ^ means start of the line. 
+
+#find the directory, number of tabfiles and the first tabfile, assign the values to variables
+dir=$(pwd)
+numberOfTabfiles=$(ls *MoreThan*.tab | wc -l)
+tabfile=$(ls *MoreThan*.tab | sed 's/\.tab//' | head -n 1)
+
+#Warn the user in case more than one tab file was found
+if [ "$numberOfTabfiles" -gt 1 ]; then
+    echo "Warning: found more than one tab file matching *MoreThan*.tab in $dir, using $tabfile"
+fi
+
+#Use the variable in sed
+ls *.pdb  |  sed 's,^,yasara -txt DisulfideDiscovery.mcr "MacroTarget = ?,g'  |  sed 's/.pdb/?" "TableFile = ?'$tabfile'?" >>LOG/g'  |  sed "s/?/'/g" >> todolist
+
+# this converts the todolist into an executable
+chmod +x todolist
