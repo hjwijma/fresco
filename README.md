@@ -4,8 +4,8 @@ A proven and powerful methods to stabilize proteins.
 **The main characteristics of FRESCO are (see figures below)**
 - aims to include as many stabilizing mutations as possible in the final variants (Scheme 1)
 - proven to work on > 8 proteins (Fig. 1)
-- high improvements in apparent melting temperature (Fig. 2) and much higher operational stability (Fig. 3)
-- no signs of an activity-stability trade-off (Fig. 4)
+- high improvements in apparent melting temperature (Fig. 1) and much higher operational stability (Fig. 2)
+- no signs of an activity-stability trade-off (Fig. 3)
 - detailed 31 page manual written for those not experienced with computational work with the command line  
 - experimentally, it requires screening one or a few 96-well plates
 - it is a workflow requiring external software that need to be obtained via licenses. Specifically this version of fresco was tested with the latest versions of FoldX (2026), the latest version Yasara-Dynamics (25.12.2), and with an archive version of Rosetta (2015.25.20.57927) which is still available for download.
