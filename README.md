@@ -6,9 +6,10 @@ A proven and powerful methods to stabilize proteins.
 - proven to work on > 8 proteins (Fig. 1)
 - high improvements in apparent melting temperature (Fig. 1) and much higher operational stability (Fig. 2)
 - no signs of an activity-stability trade-off (Fig. 3)
-- detailed 31 page manual written for those not experienced with computational work with the command line  
+- detailed 31 page manual written for those not experienced with computational work with the command line
+- the manual includes a working example to follow
 - experimentally, it requires screening one or a few 96-well plates
-- it is a workflow requiring external software that need to be obtained via licenses. Specifically this version of fresco was tested with the latest versions of FoldX (2026), the latest version Yasara-Dynamics (25.12.2), and with an archive version of Rosetta (2015.25.20.57927, still available for download).
+- it is a workflow requiring external software that need to be obtained via licenses. Specifically this version of fresco was tested with the latest versions of FoldX (2026, from https://foldxsuite.crg.eu/), the latest version of Yasara-Dynamics (25.12.2 via https://www.yasara.org/), and with an archive version of Rosetta (2015.25.20.57927, still available for download via https://rosettacommons.org/).
 
 **Some hints**
 - the manual is named protocolFRESCO<versionNumber>.pdf and includes a description of how to install the required external software.
