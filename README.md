@@ -11,7 +11,7 @@ A proven and powerful methods to stabilize proteins.
 - it is a workflow requiring external software that need to be obtained via licenses. Specifically this version of fresco was tested with the latest versions of FoldX (2026), the latest version Yasara-Dynamics (25.12.2), and with an archive version of Rosetta (2015.25.20.57927) which is still available for download.
 
 **Some hints**
-- the manual is named protocolFRESCO<versionNumber>.pdf and includes hints for installing the required external software.
+- the manual is named protocolFRESCO<versionNumber>.pdf and includes a description of how to install the required external software.
 - it is a good idea to test in advance if the targeted protein can be screened easily for thermostability. In our experience, for some 20% of the proteins standard high throughput assays like ThermoFluor fail.
 
 
